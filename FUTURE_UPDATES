@@ -1,0 +1,7 @@
+This is just a list of things Rob Porritt thinks should be done, but didn't do with this release
+
+1. Include the ability to parse and use quakeml formatted event catalogues
+2. Pull data from orfeus
+3. Higher level result analysis using the search spaces output in station.mat
+
+

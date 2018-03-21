@@ -1,0 +1,35 @@
+This file is to document, briefly, the changes between the Wustefeld distributed SplitLab1.0.5 to the current version
+--Rob Porritt, Oct 2014
+
+Version 1.2.0
+- Updated a few parts to fit R2014b
+- configpanelUSER had a line where a handle’s user data was set, but was causing a fatal error
+- in SL_showeqstats.m changed the delete function in line 249 to remove the parameter ‘bins’
+- edit splitdiagnosticLayout.m to put the diagnostic axes as children of the panels.
+- Accelerators are not working properly in splitdiagnosticLayout.m in matlab R2014b. The uimenu must be active for the accelerator key to take effect.
+
+Version 1.1.0
+- Removed last dependence on mapping toolbox from the results box
+- Saclab functions now all prefixed with "sl_"
+- NEIC catalogue option removed; does not seem to work anymore
+- CMT catalogue parsing updated slightly
+- FetchEvent catalogue format added
+- irisFetch.Event method of creating a new catalogue added
+- Newly created or updated catalogues now because the default in the config
+- mseed2sac file format reader fixed
+-   Parameters are set in the panel and then an irisFetch.Traces call is made to pull waveform data directly to disk.
+-   The retrieved waveforms should be automatically associated with the project, but the FINDFILES panel will also still work.
+-   USER panel still available for those who wish to use email requests
+- The full results, including the misfit matrices are now stored to stationName.mat in the savedir
+- Station dialog allows users to fetch the station coordinates.
+- Fetch traces contains a popup box to allow inclusion of username and password for restricted data
+- Install gui properly checks for and install irisFetch.m and matTaup, unless user lacks admin control
+
+Version 1.0.6
+- handful of functions, such as azimuth, renamed with "sl_" appended to clear namespace
+- reliance on mapping toolbox removed
+-   rough plots replace most mapping toolbox calls
+- findfiles format of mseed2sac added
+- included a custom catalogue option, but format is not terribly useful.
+- Created accelerator keys for user to put quality flag and null option quickly in results viewer
+
